@@ -1,9 +1,6 @@
 Day 22 - Rails Active Record
 ====
 
-tuesday: joins / AR
-wednesday: 
-
 Challenge
 --------
 
