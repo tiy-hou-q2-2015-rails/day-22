@@ -35,11 +35,9 @@ Assignment
 1. You should have a proper "db/seeds.rb" that populated your title and posts
    when you run `rake db:seed`
 1. When you go to "http://localhost:3000" it should list all posts (title and
-   truncated body)
+   body)
 1. You should click on the title and go to "http://localhost:3000/posts/:id" and
    display the title and body
-1. Add `published_on` to the Post using a migration
-1. Only show pubished posts
 
 
 
@@ -49,7 +47,7 @@ Notes
 How to create a Rails app, with a database and model.
 
 ```
-rails new pancakes
+rails new pancakes -d postgresql
 cd pancakes
 rake db:create
 rails generate model pancake name
