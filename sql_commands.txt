@@ -1,0 +1,18 @@
+create table cities (id integer, name varchar(255), state_id integer, created_at timestamp, updated_at timestamp);
+create table states (id integer, name varchar(255), abbreviation varchar(255), created_at timestamp, updated_at timestamp);
+
+
+insert into states (id, name, abbreviation) VALUES (1, 'Illinois', 'IL'), (2, 'Texas', 'TX'), (3, 'California', 'CA');
+
+insert into cities (id, name, state_id) VALUES (1, 'Houston', 2), (2, 'Austin', 2), (3, 'Peoria', 1), (4, 'Chicago', 1), (5, 'San Francisco', 3), (6, 'Los Angeles', 3);
+
+
+
+select * from states where abbreviation = 'TX'
+select * from cities where state_id = 2;
+
+select cities.id, cities.name, states.name as "state", states.abbreviation from cities 
+  inner join states on cities.state_id = states.id
+  where states.abbreviation = 'TX';
+  
+  
